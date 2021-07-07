@@ -2,6 +2,7 @@
 ### Aula 1 ### 
 ### Introdução ###
 
+## Diretório
 
 ## Como carregar pacotes
 
