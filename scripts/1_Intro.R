@@ -16,4 +16,14 @@ data <- read.table("nome_da_tabela.txt", h=T)
 
 data <- read.csv("nome_da_tabela.csv", h=T)
 
-## 
+## Como visualizar a tabela
+
+head(data)
+
+## Como ver nomes das colunas
+
+names(data)
+
+## Como saber a dimensão da tabela
+
+dim(data)
