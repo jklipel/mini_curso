@@ -1,4 +1,2 @@
-# mini_curso
-
-# O que é R? 
+# mini_curso R: Leveg 
 
