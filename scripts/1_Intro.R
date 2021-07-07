@@ -87,3 +87,12 @@ colnames(data) <- c("site_a", "site_b")
 ## Mudar nome de uma linha
 
 rownames(data)[rownames(data) == "1"] <- "Esp a"
+
+## Quero saber a média de uma coluna
+
+mean(data$site_b)
+
+## Quero somar os valores de uma coluna
+
+sum(data$site_a) ## esse $ indica qual coluna da tabela que queremos fazer a ação
+
