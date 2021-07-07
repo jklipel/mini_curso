@@ -1,3 +1,4 @@
 # mini_curso
 
-Mini Curso de R
+# O que é R? 
+
