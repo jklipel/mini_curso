@@ -5,7 +5,7 @@
 ## Diretório
 
 ## Como carregar pacotes
-
+library(reshape)
 
 ## Como carregar uma tabela
 
@@ -64,4 +64,26 @@ data <- data[!row.has.na,]
 
 data<-data[!(data$Nome_coluna=="Nome_linha"),]
 
+## Minha matriz tem espécies nas linhas e sites nas colunas, mas quero que seja ao contrário:
 
+data <- cast(data, Site~species, fun.aggregate = mean)
+
+## Tenho duas tabelas e quero juntá-las
+
+# concatena nas linhas:
+
+data_v2 <- rbind(data, data1)
+
+# concatena nas colunas:
+
+data_v3 <- cbind(data, data1)
+
+## Mudar o nome de uma coluna
+
+data <- data.frame(site1=1:3, site2=rnorm(3))
+head(data)
+colnames(data) <- c("site_a", "site_b")
+
+## Mudar nome de uma linha
+
+rownames(data)[rownames(data) == "1"] <- "Esp a"
