@@ -96,3 +96,10 @@ mean(data$site_b)
 
 sum(data$site_a) ## esse $ indica qual coluna da tabela que queremos fazer a ação
 
+## valor máximo da coluna
+
+max(data$site_a)
+
+## Valor mínimo da coluna
+
+min(data$site_a)
