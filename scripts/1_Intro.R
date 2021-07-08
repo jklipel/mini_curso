@@ -128,3 +128,4 @@ head(comunidade)
 #sitio precisa estar como nome de linha, e nao como variavel
 comunidade2<-comunidade %>% remove_rownames %>% column_to_rownames(var="PlotCode")
 head(comunidade2) #coloca 1 coluna como rowname
+
