@@ -39,7 +39,7 @@ comunidade2 <- round(comunidade2)
 raremax <- min(rowSums(comunidade2))
 comunidade2_rare <- rarefy(comunidade2, raremax); comunidade2_rare
 
-## Beta diversidade
+## Beta diversidade ## VER AINDA:
 
 comm_beta <- betadiver(comunidade2); comm_beta
 plot(comm_beta)
