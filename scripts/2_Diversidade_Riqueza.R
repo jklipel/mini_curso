@@ -1,3 +1,8 @@
+## Diversidade de espécies e Riqueza ##
+
+## Como carregar pacotes
+library(reshape);library(reshape2)
+library(here);library(dplyr);library(tibble);library(vegan)
 
 ## carregar dados de comunidade
 
@@ -19,11 +24,17 @@ head(comunidade2) #coloca 1 coluna como rowname
 
 ## Calcular diversidade de Shannon
 
-library(vegan) # pacote bem importante
+library(vegan) # pacote bem importante!
 
-comunidade2<- diversity(comunidade2, "shannon");comunidade2
+comunidade_div<- diversity(comunidade2, "shannon");comunidade_div
 
+## Calcular diversidade de Simpson
+
+comunidade_div2<- diversity(comunidade2, "simpson");comunidade_div2
+
+
+## Calcular Riqueza rarefeita
 
 comunidade2 <- round(comunidade2)
 raremax <- min(rowSums(comunidade2))
-comunidade2_rare <- rarefy(comunidade2, raremax)
+comunidade2_rare <- rarefy(comunidade2, raremax); comunidade2_rare
