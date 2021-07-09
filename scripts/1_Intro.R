@@ -129,3 +129,18 @@ head(comunidade)
 comunidade2<-comunidade %>% remove_rownames %>% column_to_rownames(var="PlotCode")
 head(comunidade2) #coloca 1 coluna como rowname
 
+## Fazer a matriz binária
+
+comunidade2[comunidade2>0] <-1 ; comunidade2
+
+
+## O que for 0 colocar NA
+
+comunidade2[comunidade2==0] <-NA ; comunidade2
+
+## Transpor a matriz
+
+t2<- t(comunidade2)
+t2
+
+
