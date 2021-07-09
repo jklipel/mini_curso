@@ -9,6 +9,10 @@ library(here);library(dplyr);library(tibble);library(vegan)
 data <- read.csv2(here::here("pasta_de_dados", "nome_da_tabela.csv"))
 head(data)
 
+#como filtrar dados dentro do R - funcao filter
+#precisa ser uma "tidy table" 
+data<-filter(data, D1 != "0")
+
 #funcao dcast do  pacote reshape2
 comunidade<-reshape2::dcast(data,  PlotCode~Species, value.var="D1",fun.agg = length)
 head(comunidade)
