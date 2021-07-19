@@ -143,4 +143,28 @@ comunidade2[comunidade2==0] <-NA ; comunidade2
 t2<- t(comunidade2)
 t2
 
+### Outras funcoes uteis ----------
+
+#valores estao em fator ou caracter, mas preciso que sejam numericos
+as.numeric
+#exemplo:
+class(data$Height)
+data$Height <- as.numeric(data$Height)
+class(data$Height)
+
+#valores estao em caracter ou numericos, mas preciso que sejam fatores
+as.factor
+#exemplo
+class(data$PlotCode)
+data$PlotCode <- as.factor(data$PlotCode)
+class(data$PlotCode)
+
+#checando nomes de especies (Flora do Brasil)
+library(flora)
+#funcao: get.taxa
+especies <- get.taxa(data$Species); especies
+
+#checar os nomes que nao sao aceitos (incorretos)
+erro <- filter(especies, taxon.status != "accepted")
+erro # nesse exemplo todos os nomes estao corretos (aceitos)
 
