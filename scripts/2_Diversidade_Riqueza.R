@@ -18,8 +18,8 @@ comunidade<-reshape2::dcast(data,  PlotCode~Species, value.var="D1",fun.agg = le
 head(comunidade)
 
 #removendo a primeira linha e segunda coluna
-comunidade<-comunidade[-1,-2]
-head(comunidade)
+#comunidade<-comunidade[-1,-2]
+#head(comunidade)
 
 #sitio precisa estar como nome de linha, e nao como variavel
 comunidade2<-comunidade %>% remove_rownames %>% column_to_rownames(var="PlotCode")
@@ -81,3 +81,4 @@ beta_sim<-beta_nat[["beta.sim"]] ###objeto apenas com a matriz de simpson
 beta_sim # turnover
 class(beta_sim)
 length(beta_sim)
+
